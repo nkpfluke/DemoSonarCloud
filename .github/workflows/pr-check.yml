@@ -1,0 +1,7 @@
+name: PR Check
+on: [pull_request]
+
+jobs:
+  build:
+    name: Build code
+    uses: ./.github/workflows/build.yml
