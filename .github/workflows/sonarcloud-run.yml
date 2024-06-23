@@ -22,12 +22,17 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Build Java Project
+        run: mvn clean package
+
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
-          GITHUB_TOKEN: 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
+          GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
           SONAR_TOKEN: 31218bfed29d9d79f77982becdb8b46f705651ba
         with:
           args: >
               -Dsonar.organization=nkpfluke
               -Dsonar.projectKey=DemoSonarCloud
+              -Dsonar.sources=src/main/java
+              -Dsonar.java.binaries=target/classes
