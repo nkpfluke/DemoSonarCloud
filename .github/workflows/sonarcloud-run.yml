@@ -1,11 +1,13 @@
 name: SonarCloud Scan
 
-on:
-  workflow_call:
-    inputs:
-      project-name:
-        required: false
-        type: string
+#on:
+#  workflow_call:
+#    inputs:
+#      project-name:
+#        required: false
+#        type: string
+
+on: [pull_request, push]
 
 jobs:
   sonarcloud-scan:

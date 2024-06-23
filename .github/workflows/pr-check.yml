@@ -1,11 +1,11 @@
-name: PR Check
-on: [pull_request]
-
-jobs:
-  build:
-    name: Build code
-    uses: ./.github/workflows/build.yml
-
-  sonarcloud-scan:
-    name: SonarCloud Scan
-    uses: ./.github/workflows/sonarcloud-run.yml
+#name: PR Check
+#on: [pull_request, push]
+#
+#jobs:
+#  build:
+#    name: Build code
+#    uses: ./.github/workflows/build.yml
+#
+#  sonarcloud-scan:
+#    name: SonarCloud Scan
+#    uses: ./.github/workflows/sonarcloud-run.yml
