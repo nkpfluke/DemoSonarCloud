@@ -33,6 +33,6 @@ jobs:
         with:
           args: >
               -D sonar.organization=niteshorgkey
-              -D sonar.projectKey=DemoSonarCloud
+              -D sonar.projectKey=nkpfluke_DemoSonarCloud
               -D sonar.sources=src/main/java
               -D sonar.java.binaries=target/classes
