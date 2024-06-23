@@ -5,3 +5,7 @@ jobs:
   build:
     name: Build code
     uses: ./.github/workflows/build.yml
+
+  sonarcloud-scan:
+    name: SonarCloud Scan
+    uses: ./.github/workflows/sonarcloud-run.yml
